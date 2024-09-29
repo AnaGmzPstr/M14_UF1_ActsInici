@@ -116,6 +116,12 @@ h1{
     text-align: left;
 }
 
+.tachar{
+    text-decoration: line-through;
+    color: grey;
+    transition: background-color 0.3s ease;
+}
+
 .tarea {
     padding: 10px;
     border-bottom: 1px solid #444;

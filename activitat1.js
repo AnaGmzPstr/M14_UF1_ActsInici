@@ -126,13 +126,12 @@ function crearElementTarea(tasca){
 function crearCheck(){
     let check = document.createElement('input');
     check.type = 'checkbox';
-    check.addEventListener('change', () =>{
-        if (check.checked) {
-            label.style.textDecoration = 'line-through';
-            label.style.color='grey';
+    check.addEventListener('change', (event) =>{
+        let label = event.target.nextElementSibling;
+        if (event.target.checked) {
+            label.className='tachar';
         } else {
-            label.style.textDecoration = 'none';
-            label.style.color='white';
+            label.classList.remove('tachar');
         }
     });
 
