@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #222;
+        color: #fff;
+    }
+
+    .btn {
+        background-color: #ECEFF1;
+        color: #000;
+        border: none;
+        width: 130px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 5px;
+    }
+
+    .btn:hover {
+        background-color: #878d93;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    .exercici{
+        padding: 20px;
+        margin: 10px;
+        background-color: #333;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        width: 50%;
+    }
+
+    .exercici input{
+        padding: 8px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Contenedor principal */
+    .listCont {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #333;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        color: #fff;
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+
+    /* Estilo del título */
+    .listCont h3 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #f1f1f1;
+    }
+
+    /* Estilo del input y botones */
+    .listCont input[type="text"] {
+        width: 70%;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        margin-right: 10px;
+        font-size: 16px;
+    }
+
+    .button {
+        padding: 10px 15px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Estilo del botón para añadir tarea */
+    .addTask {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    .addTask:hover {
+        background-color: #45A049;
+    }
+
+/* Estilo del botón para eliminar tarea */
+    .deleteTask {
+        margin: 10px;
+        background-color: #f44336;
+        color: white;
+    }
+
+    .deleteTask:hover {
+        background-color: #e53935;
+    }
+
+    #lista {
+        margin-top: 20px;
+        text-align: left;
+    }
+
+    .tarea {
+        padding: 10px;
+        border-bottom: 1px solid #444;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        background-color: #444;
+        color: #fff;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        transition: background-color 0.3s ease;
+    }
+
+    .tarea:hover {
+        background-color: #555;
+    }
+
+    /* Estilo del checkbox */
+    .tarea input[type="checkbox"] {
+        appearance: none;
+        margin-right: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .tarea input[type="checkbox"]:checked {
+        background-color: #4CAF50;
+        border-color: #4CAF50;
+    }
+
+    .tarea input[type="checkbox"]:checked::after {
+        content: "✔";
+        color: white;
+        position: absolute;
+        left: 3px;
+        font-size: 14px;
+    }
+
+    /* Estilo del botón eliminar dentro de la lista */
+    .eliminar {
+        background-color: #f44336;
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .eliminar:hover {
+        background-color: #e53935;
+    }
+</style>
+
+<body>
+
+    <body>
+        <!-- Exercicis escalfament -->
+        <h1>Exercicis escalfament JavaScript</h1>
+        <div class="container">
+            <div class="exercici">
+                <h2>Exercici 1</h2>
+                <p>
+                    Introdueix dos números, el més gran es el...
+                </p>
+                <input type="number" id="num1" >
+                <input type="number" id="num2" ><br>
+                <button class="btn" onclick="comparaNumeros()">Resultat</button>
+                <p id="res1"></p>
+            </div>
+            
+            <div class="exercici">
+                <h2>Exercici 2</h2>
+                <p>
+                    La suma de tots els números del 1 al 100 es...
+                </p>
+                <button class="btn" onclick="suma1a100()">Resultat</button>
+                <p id="res2"></p>
+            </div>
+            
+            <div class="exercici">
+                <h2>Exercici 3</h2>
+                <p>Sortirà un compte del 1 al 20. Si el número es múltiple de 3 sortirà 'Pedra', si es múltiple de 5 sortirà 'Paper', si es múltiple d'ambdos sortirà 'Tisores' i si no es cap sortirá el número que toca</p>
+                <button class="btn" onclick="pedraPaper()">Resultat</button>
+                <p id="res3"></p>
+            </div>
+            <div class="exercici">
+                <h2>Exercici 4</h2>
+                <p>
+                    Introdueix un número i el programa dirà true si és parell o false si es senar
+                </p>
+                <input type="number" id="num4" ><br>
+                <button class="btn" onclick="esParell()">Resultat</button>
+                <p id="res4"></p>
+            </div>
+            
+            <div class="exercici">
+                <h2>Exercici 5</h2>
+                <p>
+                    Escriu una cadena de text i es retornarà a la inversa
+                </p>
+                <input type="text" id="txt"><br>
+                <button class="btn" onclick="revertirCadena()">Resultat</button>
+                <p id="res5"></p>
+            </div>
+            
+            <div class="exercici">
+                <h2>Exercici 6</h2>
+                <p>
+                    Introdueix un número i es rotorna el factorial
+                </p>
+                <input type="number" id="num6" ><br>
+                <button class="btn" onclick="factorial()">Resultat</button>
+                <p id="res6"></p>
+            </div>
+            
+            <div class="exercici">
+                <h2>Exercici 7</h2>
+                <p>
+                    Introdueix una série de números i es retornaràn els positius
+                </p>
+                <input type="text" id="num7" ><br>
+                <button class="btn" onclick="filtrarPositius()">Resultat</button>
+                <p id="res7"></p>
+            </div>
+            
+        </div>
+        <!-- ToDo list -->
+        <hr>
+        <div class="listCont">
+            <h3>ToDo list</h3>
+            <div>
+                <input type="text" id="tasca" placeholder="Escriu la teva tasca">
+                <button class="button addTask" onclick="afegirElement()">Afegir</button>
+                <button class="button deleteTask" onclick="vaciarLista()">Buidar llista</button>
+            </div>
+
+            <div id="lista"></div>
+
+        </div>
+
+    </body>
+    <script src="activitat1.js"></script>
+</body>
+
+</html>
