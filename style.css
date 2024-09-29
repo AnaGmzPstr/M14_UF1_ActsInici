@@ -51,7 +51,7 @@ h1{
 
 /* Contenedor principal */
 .listCont {
-    max-width: 400px;
+    width: 50%;
     margin: 50px auto;
     padding: 20px;
     background-color: #333;
@@ -103,6 +103,8 @@ h1{
     margin: 10px;
     background-color: #f44336;
     color: white;
+    
+
 }
 
 .deleteTask:hover {
@@ -118,8 +120,9 @@ h1{
     padding: 10px;
     border-bottom: 1px solid #444;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    width: 95%;
+    justify-content: space-between;
     font-size: 16px;
     background-color: #444;
     color: #fff;
@@ -130,6 +133,10 @@ h1{
 
 .tarea:hover {
     background-color: #555;
+}
+
+.tarea label{
+    width: 90%;
 }
 
 /* Estilo del checkbox */
@@ -167,6 +174,7 @@ h1{
     cursor: pointer;
     border-radius: 5px;
     font-size: 14px;
+    float:left;
 }
 
 .eliminar:hover {
