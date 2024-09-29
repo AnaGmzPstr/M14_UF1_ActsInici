@@ -1,3 +1,4 @@
+//Funció que compara dos números i retorna el més gran
 function comparaNumeros() {
     let resultado = document.getElementById('res1');
 
@@ -10,6 +11,7 @@ function comparaNumeros() {
     else resultado.textContent=`Els números són iguals`;
 }
 
+//Funció de suma tots els números del 1 al 100 inclosos i retorna el resultat
 function suma1a100() {
     let resultado = document.getElementById('res2');
     let suma = 0
@@ -19,6 +21,11 @@ function suma1a100() {
     resultado.textContent=suma
 }
 
+//Funció que mostra els números del 1 al 20 però:
+//- si és múltiple de 3 surt pedra
+//- si és múltiple de 5 surt paper
+//- si és múltiple de 3 i 5 surt tissores
+//- si no es dona cap cas surt el número que toca
 function pedraPaper() {
     let resultado = document.getElementById('res3');
             resultado.innerHTML = ''; 
@@ -33,6 +40,7 @@ function pedraPaper() {
             }
 }
 
+//Funció que retorna true si un número es parell i si no retorna false
 function esParell() {
     let resultado = document.getElementById('res4');
     let num = document.getElementById('num4').value;
@@ -43,6 +51,7 @@ function esParell() {
     }
 }
 
+//Funció que reverteix una cadena de text
 function revertirCadena() {
     let resultado = document.getElementById('res5');
     let txt = document.getElementById('txt').value;
@@ -51,6 +60,7 @@ function revertirCadena() {
     
 }
 
+//Funció que calcula el factorial d'un número
 function factorial() {
     let resultado = document.getElementById('res6');
     let num = document.getElementById('num6').value;
@@ -61,6 +71,7 @@ function factorial() {
     resultado.textContent=factorial
 }
 
+//Funció que donat un array de números retorna només els positius
 function filtrarPositius() {
     let resultado = document.getElementById('res7');
     let num = document.getElementById('num7').value;
@@ -71,7 +82,7 @@ function filtrarPositius() {
 
 
 //TODO list 
-//Funcion que añade tarea
+//Funció que comproba que la tasca es vàlida i que afegeix la tasca
 function afegirElement() {
     let tarea = document.getElementById('tasca').value;
     console.log(tarea)
@@ -79,12 +90,13 @@ function afegirElement() {
     else crearTarea(tarea);
 }
 
-//Función que vacía la lista
+//Funció que buida la llista de tasques
 function vaciarLista() {
     let lista = document.getElementById('lista');
     lista.innerHTML = "";
 }
 
+//Funció que crea tots els elements de la tasca donat el missatge
 function crearTarea(mensaje) {
     let lista = document.getElementById('lista');
     let check = document.createElement('input');
